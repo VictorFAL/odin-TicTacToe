@@ -1,5 +1,6 @@
 const spots = document.querySelectorAll('td');
 
+// Game Board
 const gameBoard = (() => {
     'use strict';
 
@@ -7,7 +8,7 @@ const gameBoard = (() => {
 
     spots.forEach(spot => {
         spot.addEventListener('click', () => {
-            if(spot != "") {
+            if(spot.innerText == "") {
                 if(playerX.active) {
                     playerX.play(spot.dataset.index);
                     playerX.active = false;
@@ -30,6 +31,7 @@ const gameBoard = (() => {
 })();
 
 
+// Game Control
 const game = (() => {
     'use strict';
 
@@ -39,10 +41,15 @@ const game = (() => {
         });
     }
 
+    const checkWin = (mark) => {
+        const condition = [];
+    }
+
     return {render}
 })();
 
 
+// Player
 const player = (mark) => {
     let active = true;
 
