@@ -29,6 +29,11 @@ const gameBoard = (() => {
         }, {once: true});
     });
 
+    const _btnReset = document.querySelector('button');
+    _btnReset.addEventListener('click', () => {
+        window.location.reload();
+    });
+
     return {board}
 })();
 
