@@ -21,3 +21,8 @@ td:hover {
     cursor: pointer;
     background-color: rgb(238, 238, 238);
 }
+
+.activated:hover {
+    cursor: default;
+    background-color: white;
+}
